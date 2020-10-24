@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView,CreateView
 from .models import Task
 # Create your views here.
 
@@ -7,3 +7,9 @@ from .models import Task
 
 class TaskList(ListView):
     model=Task
+    
+ 
+
+class CreateTask(CreateView):
+   model=Task
+   fields=['title','contex'] 
